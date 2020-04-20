@@ -22,13 +22,13 @@ function ManageCoursePage({
       loadCourses().catch((error) => {
         alert("loading courses failed" + error);
       });
+    } else {
+        setCourse({ ...props.course });
     }
     if (authors.length === 0) {
       loadAuthors().catch((error) => {
         alert("loading courses failed" + error);
       });
-    } else {
-      setCourse({ ...props.course });
     }
   }, [props.course]);
 
