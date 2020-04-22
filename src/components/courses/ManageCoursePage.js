@@ -5,6 +5,7 @@ import * as authorActions from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
 import CourseForm from "./CourseForm";
 import { newCourse } from "../../../tools/mockData";
+import Spinner from "../common/Spinner";
 
 function ManageCoursePage({
   courses,
@@ -23,7 +24,7 @@ function ManageCoursePage({
         alert("loading courses failed" + error);
       });
     } else {
-        setCourse({ ...props.course });
+      setCourse({ ...props.course });
     }
     if (authors.length === 0) {
       loadAuthors().catch((error) => {
@@ -46,7 +47,9 @@ function ManageCoursePage({
       history.push("/courses");
     });
   }
-  return (
+  return authors.length === 0 || courses.length === 0 ? (
+    <Spinner />
+  ) : (
     <CourseForm
       course={course}
       errors={errors}
