@@ -19,5 +19,5 @@ it("should add course when passed CREATE_COURSE_SUCCESS", () => {
   expect(newState.length).toEqual(3);
   expect(newState[0].title).toEqual("A");
   expect(newState[1].title).toEqual("B");
-  expect(newState[2].title.toEqual("C"));
+  expect(newState[2].title).toEqual("C");
 });

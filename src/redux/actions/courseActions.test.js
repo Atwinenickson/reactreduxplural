@@ -10,6 +10,6 @@ describe("createCourseSuccess", () => {
       course,
     };
     const action = courseActions.createCourseSuccess(course);
-    expectedAction(action).toEqual(expectedAction);
+    expect(action).toEqual(expectedAction);
   });
 });

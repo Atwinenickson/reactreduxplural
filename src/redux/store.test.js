@@ -10,7 +10,7 @@ it("Should handle creating courses", function () {
   };
 
   const action = courseActions.createCourseSuccess(course);
-  store.dispacth(action);
+  store.dispatch(action);
 
   const createdCourse = store.getState().courses[0];
   expect(createdCourse).toEqual(course);
