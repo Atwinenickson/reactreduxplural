@@ -1,0 +1,52 @@
+{
+    "ignore": [],
+    "env": {
+        "testing": {
+            "presets": [
+                "es2015",
+                "stage-1",
+                "react",
+                "flow"
+            ],
+            "plugins": [
+                "lodash",
+                "transform-runtime"
+            ]
+        },
+        "production": {
+            "presets": [
+                [
+                    "es2015",
+                    {
+                        "modules": false
+                    }
+                ],
+                "stage-1",
+                "react",
+                "flow"
+            ],
+            "plugins": [
+                "lodash",
+                "transform-runtime"
+            ]
+        },
+        "development": {
+            "presets": [
+                [
+                    "es2015",
+                    {
+                        "modules": false
+                    }
+                ],
+                "stage-1",
+                "react",
+                "flow"
+            ],
+            "plugins": [
+                "lodash",
+                "transform-runtime",
+                "react-hot-loader/babel"
+            ]
+        }
+    }
+}
